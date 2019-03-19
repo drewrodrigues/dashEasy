@@ -1,0 +1,83 @@
+body {
+  background: url("../images/bkg.jpg");
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+}
+
+blockquote {
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.todos,
+.journal,
+.water-intake {
+  float: left;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.todos-title,
+.journal-title,
+.water-intake-title {
+  background-color: #222;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.todos-content,
+.journal-content,
+.water-intake-content {
+  padding: 20px;
+}
+
+.journal-icon {
+  margin-right: 10px;
+}
+
+.todos {
+  width: 24%;
+  margin-right: 1%;
+}
+
+.journal {
+  width: 49%;
+  margin-right: 1%;
+}
+
+.water-intake {
+  width: 25%;
+}
+
+.weather {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.weather-location {
+  margin-top: 10px;
+}
+
+.weather-temp {
+  font-size: 42px;
+}
+
+.quote {
+  text-align: center;
+  margin-bottom: 50px;
+}

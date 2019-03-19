@@ -39,11 +39,12 @@ class Todos {
   appendToList(text, index) {
     // create list item & fill with text
     let todoItem = document.createElement('li')
+    todoItem.classList += "todo-item"
     todoItem.textContent = text
     // set index so we can delete it later
     todoItem.setAttribute('data-index', index)
     // add to list
-    this.todosList.appendChild(todoItem)
+    this.todosList.prepend(todoItem)
   }
 
   updateStorage() {
@@ -51,7 +52,7 @@ class Todos {
   }
 
   add(text) {
-    this.list.push({ title: text, done: false })
+    this.list.unshift({ title: text })
     this.appendToList(text, this.list.length-1)
     this.todosAddText.value = ""
     this.updateStorage()

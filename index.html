@@ -26,17 +26,19 @@
   <div class="container">
     <section class="todos">
       <h2 class="todos-title">
-        <i class="fas fa-check"></i>
         Todos
       </h2>
 
       <div class="todos-content">
         <form id="todos-add-form">
-          <input type="text" id="todos-add-text">
-          <button id="todos-add">Add</button>
+          <input type="text" id="todos-add-text" class="todos-add-text" autocomplete="off" placeholder="Add a todo...">
         </form>
-        <ul id="todos-list">
+        <ul id="todos-list" class="todos-list">
         </ul>
+          <p class="todos-list-placeholder">
+            <i class="fas fa-check placeholder-icon"></i>
+            <span>Everything's done</span>
+          </p>
       </div>
     </section>
 

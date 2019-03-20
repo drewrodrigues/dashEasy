@@ -1,0 +1,60 @@
+.journal {
+  width: 49%;
+  margin-right: 1%;
+}
+
+.journal-content-container.hide {
+  display: none;
+}
+
+.journal-previous-entries-container.hide {
+  display: none;
+}
+
+.journal-content {
+  display: block;
+  width: 100%;
+  resize: none;
+  border: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 0;
+  font-size: 16px;
+  height: 300px;
+  line-height: 1.6;
+}
+
+.journal-content:focus {
+  border: 0;
+  outline: 0;
+}
+
+.journal-previous-entries,
+.journal-show-content {
+  max-height: 300px;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+}
+
+.journal-previous-entries-title {
+  margin: 10px 0;
+}
+
+.journal-previous-entry {
+  margin-bottom: 5px;
+  border-left: 3px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #eee;
+}
+
+.journal-button-hide {
+
+}
+
+.journal-button-save {
+  float: right;
+}

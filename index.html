@@ -42,23 +42,44 @@
       </div>
     </section>
 
-    <section class="journal">
-      <h2 class="journal-title">
-        <i class="fas fa-book" class="journal-icon"></i>
+    <section class="card journal">
+      <h2 class="card-title">
+        <span class="card-title-bar"></span>
         Journal
       </h2>
 
-      <div class="journal-content">
-        <textarea>
-        </textarea>
-    
-        <h3>Previous Entries</h3>
-        <ul>
-          <li><a href="#">Some title</a></li>
-          <li><a href="#">Some title</a></li>
-          <li><a href="#">Some title</a></li>
-          <li><a href="#">Some title</a></li>
-        </ul>
+      <div class="card-content">
+        <div class="row placeholder-journal">
+          <div class="placeholder-half">
+            <i class="fas fa-history placeholder-icon"></i>
+            <p class="placeholder-text">Read old entries</p>
+            <button class="button placeholder-button journal-button-archive">Archive</button>
+          </div>
+          <div class="placeholder-half">
+            <i class="fas fa-book" class="journal-icon placeholder-icon"></i>
+            <p class="placeholder-text">Add a new entry</p>
+            <button class="button placeholder-button journal-button-add">Add</button>
+          </div>
+        </div>
+
+        <div class="journal-content-container hide">
+          <textarea class="journal-content"></textarea>
+          <button class="button journal-button journal-button-cancel">Cancel</button>
+          <button class="button journal-button journal-button-save">Save</button>
+        </div>
+
+        <div class="journal-previous-entries-container hide">
+          <button class="button journal-button journal-button-back">Back</button>
+          <h3 class="journal-previous-entries-title">Previous Entries</h3>
+          <ul class="journal-previous-entries">
+          </ul>
+        </div>
+
+        <div class="journal-show hide">
+          <button class="button journal-button-back">Back</button>
+          <button class="button journal-button-delete">Delete</button>
+          <p class="journal-show-content"></p>
+        </div>
       </div>
     </section>
   

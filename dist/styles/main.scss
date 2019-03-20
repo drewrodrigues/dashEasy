@@ -1,0 +1,150 @@
+@import "base/reset";
+@import "partials/todos";
+@import "partials/weather";
+@import "partials/journal";
+@import "partials/water";
+
+body {
+  background: url("../images/bkg3.jpg");
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  background-position: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  float: left;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-title-bar {
+  box-shadow: 0 0 6px 3px rgba(255,255,255,0.4);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 50%;
+  border: 1px solid #fff;
+}
+
+.card-title {
+  position: relative;
+  background-color: rgba(255,255,255,0.4);
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.card-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.placeholder {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.placeholder-half {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.placeholder-half:first-of-type {
+  border-right: 1px solid #efefef;
+}
+
+.row:after {
+  height: 0;
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.placeholder-half i,
+.placeholder i {
+  color: #D6D8C9;
+  margin-bottom: 25px;
+  display: block;
+  font-size: 32px;
+}
+
+.placeholder-text {
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.placeholder-button {
+  margin-top: 20px;
+}
+
+.quote {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.button {
+  border-radius: 3px;
+  padding: 5px 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s;
+  border: 1px solid #efefef;
+}
+
+.button:focus {
+  border: 1px solid #efefef;
+  outline: 0;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  border: 1px solid greenyellow;
+}
+
+.hide {
+  display: none;
+}
+
+.range-tooltip {
+  position: absolute;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 3px;
+  z-index: 100;
+  border: 1px solid #ddd;
+}
+
+.range-tooltip:after {
+  content: '';
+  height: 5px;
+  width: 5px;
+  transform: rotate(45deg);
+  position: absolute;
+  left: -3px;
+  top: 6px;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  z-index: 1;
+}

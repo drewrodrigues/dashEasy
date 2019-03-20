@@ -5,7 +5,7 @@
 @import "partials/water";
 
 body {
-  background: url("../images/bkg3.jpg");
+  background: url("../images/bkg2.jpg");
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
   background-position: center;
@@ -22,15 +22,6 @@ body {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   position: relative;
   overflow: hidden;
-}
-
-.card-title-bar {
-  box-shadow: 0 0 6px 3px rgba(255,255,255,0.4);
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  height: 50%;
-  border: 1px solid #fff;
 }
 
 .card-title {

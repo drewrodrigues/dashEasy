@@ -23,21 +23,23 @@
   </section>
 
   <div class="container">
-    <section class="todos">
-      <h2 class="todos-title">
+    <section class="card todos">
+      <h2 class="card-title">
+        <span class="card-title-bar"></span>
         Todos
       </h2>
 
-      <div class="todos-content">
+      <div class="card-content">
         <form id="todos-add-form">
           <input type="text" id="todos-add-text" class="todos-add-text" autocomplete="off" placeholder="Add a todo...">
         </form>
         <ul id="todos-list" class="todos-list">
         </ul>
-          <p class="todos-list-placeholder">
-            <i class="fas fa-check placeholder-icon"></i>
-            <span>Everything's done</span>
-          </p>
+
+        <div class="placeholder">
+          <i class="fas fa-check placeholder-icon"></i>
+          <p class="placeholder-text">Everything's done</p>
+        </div>
       </div>
     </section>
 

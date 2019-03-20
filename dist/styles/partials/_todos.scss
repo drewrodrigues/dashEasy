@@ -1,0 +1,66 @@
+
+.todos {
+  width: 24%;
+  margin-right: 1%;
+}
+
+.todos-list {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.todos-add-text {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 0;
+  font-size: 14px;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.todos-add-text:focus {
+  border: 0;
+  outline: 0;
+}
+
+.todos-list + .todos-list-placeholder {
+  display: none;
+}
+
+.todos-list:empty + .todos-list-placeholder {
+  display: block;
+}
+
+.todo-item {
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  padding: 10px;
+  transition: all 0.25s;
+  font-size: 14px;
+}
+
+.todo-item:hover {
+  border: 1px solid greenyellow;
+  border-left: 5px solid greenyellow;
+  cursor: pointer;
+}
+
+.todos-list-placeholder {
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+  padding: 50px 0;
+}
+
+.todos-list-placeholder i {
+  color: greenyellow;
+  font-size: 32px;
+}
+
+.todos-list-placeholder span {
+  display: block;
+  font-size: 16px;
+}

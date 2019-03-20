@@ -1,50 +1,60 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
 body {
-  background: url("../images/bkg2.jpg");
-  background-size: cover;
-  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
 }
 
-blockquote {
-  font-family: 'Dancing Script', cursive;
-  font-size: 42px;
-  font-weight: 700;
-  color: #fff;
+ol, ul {
+  list-style: none;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
+blockquote, q {
+  quotes: none;
 }
 
-.todos,
-.journal,
-.water-intake {
-  float: left;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
 }
 
-
-.todos-title,
-.journal-title,
-.water-intake-title {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-  font-size: 20px;
-  text-align: center;
-  font-weight: 700;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-.todos-content,
-.journal-content,
-.water-intake-content {
-  padding: 20px;
-}
-
-.journal-icon {
-  margin-right: 10px;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .todos {
@@ -62,11 +72,11 @@ blockquote {
   display: block;
   margin-bottom: 20px;
   padding: 10px;
-  background: #eee;
   border: 0;
-  font-size: 16px;
-  font-weight: 700;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  font-size: 14px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .todos-add-text:focus {
@@ -83,23 +93,19 @@ blockquote {
 }
 
 .todo-item {
-  border-left: 5px solid #ddd;
+  border: 1px solid #efefef;
+  border-radius: 3px;
   margin-bottom: 5px;
   padding: 10px;
+  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   font-size: 14px;
 }
 
 .todo-item:hover {
-  border-left: 5px solid green;
-  background: greenyellow;
+  border: 1px solid greenyellow;
+  border-left: 5px solid greenyellow;
   cursor: pointer;
-}
-
-.placeholder-icon {
-  margin-bottom: 10px;
-  display: block;
-  font-size: 32px;
 }
 
 .todos-list-placeholder {
@@ -119,18 +125,9 @@ blockquote {
   font-size: 16px;
 }
 
-.journal {
-  width: 49%;
-  margin-right: 1%;
-}
-
-.water-intake {
-  width: 25%;
-}
-
 .weather {
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   text-align: center;
   color: #fff;
 }
@@ -143,7 +140,242 @@ blockquote {
   font-size: 42px;
 }
 
+.journal {
+  width: 49%;
+  margin-right: 1%;
+}
+
+.journal-content-container.hide {
+  display: none;
+}
+
+.journal-previous-entries-container.hide {
+  display: none;
+}
+
+.journal-content {
+  display: block;
+  width: 100%;
+  resize: none;
+  border: 0;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 0;
+  font-size: 16px;
+  height: 300px;
+  line-height: 1.6;
+}
+
+.journal-content:focus {
+  border: 0;
+  outline: 0;
+}
+
+.journal-previous-entries,
+.journal-show-content {
+  max-height: 300px;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+}
+
+.journal-previous-entries-title {
+  margin: 10px 0;
+}
+
+.journal-previous-entry {
+  margin-bottom: 5px;
+  border-left: 3px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: #eee;
+}
+
+.journal-button-save {
+  float: right;
+}
+
+.water-intake {
+  width: 25%;
+}
+
+.water-svg {
+  width: 100%;
+  -webkit-filter: invert(0.75) sepia(1) saturate(0) hue-rotate(175deg);
+          filter: invert(0.75) sepia(1) saturate(0) hue-rotate(175deg);
+  position: absolute;
+  left: 0;
+  bottom: -42px;
+  z-index: -1;
+}
+
+.water-intake-buttons {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.water-intake-buttons .button {
+  margin-right: 3px;
+}
+
+.water-intake-buttons .button:last-of-type {
+  margin-right: 0;
+}
+
+.placeholder i.complete {
+  color: #7ABAF2;
+}
+
+body {
+  background: url("../images/bkg3.jpg");
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  background-position: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  float: left;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-title-bar {
+  -webkit-box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.4);
+          box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 50%;
+  border: 1px solid #fff;
+}
+
+.card-title {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.card-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.placeholder {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.placeholder-half {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.placeholder-half:first-of-type {
+  border-right: 1px solid #efefef;
+}
+
+.row:after {
+  height: 0;
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.placeholder-half i,
+.placeholder i {
+  color: #D6D8C9;
+  margin-bottom: 25px;
+  display: block;
+  font-size: 32px;
+}
+
+.placeholder-text {
+  text-align: center;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.placeholder-button {
+  margin-top: 20px;
+}
+
 .quote {
   text-align: center;
   margin-bottom: 50px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
 }
+
+.button {
+  border-radius: 3px;
+  padding: 5px 10px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border: 1px solid #efefef;
+}
+
+.button:focus {
+  border: 1px solid #efefef;
+  outline: 0;
+}
+
+.button:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  border: 1px solid greenyellow;
+}
+
+.hide {
+  display: none;
+}
+
+.range-tooltip {
+  position: absolute;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 3px;
+  z-index: 100;
+  border: 1px solid #ddd;
+}
+
+.range-tooltip:after {
+  content: '';
+  height: 5px;
+  width: 5px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  left: -3px;
+  top: 6px;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  z-index: 1;
+}
+/*# sourceMappingURL=main.css.map */

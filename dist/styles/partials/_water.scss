@@ -1,0 +1,29 @@
+.water-intake {
+  width: 25%;
+}
+
+.water-svg {
+  width: 100%;
+  filter: invert(0.75) sepia(1) saturate(0) hue-rotate(175deg);
+  position: absolute;
+  left: 0;
+  bottom: -42px;
+  z-index: -1;
+}
+
+.water-intake-buttons {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.water-intake-buttons .button {
+  margin-right: 3px;
+}
+
+.water-intake-buttons .button:last-of-type {
+  margin-right: 0;
+}
+
+.placeholder i.complete {
+  color: #7ABAF2;
+}

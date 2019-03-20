@@ -83,18 +83,25 @@
       </div>
     </section>
   
-    <section class="water-intake">
-      <h2 class="water-intake-title">
-        <i class="fas fa-tint"></i>
+    <section class="card water-intake">
+      <h2 class="card-title">
+        <span class="card-title-bar"></span>
         Water
       </h2>
 
-      <div class="water-intake-content">
-        <p>72 oz</p>
-        <input type="range" min="1" max="16">
-        <button>Add</button>
-        <button>Remove</button>
-        <button>Clear</button>
+      <div class="card-content">
+        <div class="placeholder">
+          <i class="fas fa-tint placeholder-icon water-intake-icon"></i>
+          <p class="placeholder-text"><span class="water-intake-total">0</span> / 100 oz</p>
+          <input type="range" min="1" max="16" value="8" class="water-intake-range">
+          <span class="range-tooltip">8</span>
+          <div class="water-intake-buttons">
+            <button class="button water-intake-button-add">Add</button><!--
+         --><button class="button water-intake-button-remove">Remove</button><!--
+         --><button class="button water-intake-button-clear">Clear</button>
+          </div>
+        </div>
+        <img src="dist/images/water.svg" class="water-svg done"/>
       </div>
     </section>
   </div>

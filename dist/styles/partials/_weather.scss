@@ -12,3 +12,26 @@
 .weather-temp {
   font-size: 42px;
 }
+
+.weather-forecast {
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 0;
+}
+.weather-forecast-graph div {
+  background: rgba(255, 255, 255, 0.4);
+  display: block;
+  padding: 5px;
+  margin-bottom: 1px;
+  color: white;
+  font-size: 12px;
+  border-radius: 0 15px 15px 0;
+}
+
+.weather-forecast-graph p {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  float: right;
+}
